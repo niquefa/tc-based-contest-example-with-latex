@@ -1,0 +1,60 @@
+Little Teddy and Little Tracy are now learning how to speak words. Their mother, of course, doesn't want them to speak bad words. According to her definition, a word W is bad if at least one of the following conditions hold (see the notes in input specification section for definitions):
+
+W contains the string badPrefix as a prefix.
+W contains the string badSuffix as a suffix.
+W contains the string badSubstring as a contiguous substring that is neither a prefix nor a suffix of W.
+You are given a vocabulary representing the words that Teddy and Tracy are going to learn. Find and print the number of bad words in vocabulary.
+
+\subsection* {Input}
+
+The input will consist in several test cases; each test case will consist of three lines, the first line will contain badPrefix, badSuffix and badSubstring, separated by single spaces and with out leading or trailing spaces, the second line of each test case will contain the vocabulary, separated by single spaces and with out leading or trailing spaces. You can assume the following conditions will always be true:
+A prefix of a string is obtained by removing zero or more contiguous characters from the end of the string.
+A suffix of a string is obtained by removing zero or more contiguous characters from the beginning of the string.
+badPrefix, badSuffix, and badSubstring will each contain between 1 and 50 characters, inclusive.
+vocabulary will contain between 1 and 50 elements, inclusive.
+Each element vocabulary will contain between 1 and 50 characters, inclusive.
+Each character of badPrefix, badSuffix, and badSubstring will be between 'a' and 'z', inclusive.
+Each character in vocabulary will be between 'a' and 'z', inclusive.
+All elements of vocabulary will be distinct.
+
+\subsection* {Output}
+
+For each test case, print one line with the answer, follow the format on the output example.
+
+\outputnotice
+
+\vspace{12pt}
+\begin{minipage}[c]{1\textwidth}%
+	\begin{center}
+		\begin{tabular}{|l|l|} \hline 
+		\begin{minipage}[t]{0.6\textwidth}%
+		\bf{Input sample} \\
+		\begin{verbatim}
+bug bug bug
+buggy debugger debug
+a b c
+a b tco
+cut sore scar
+scary oscar
+bar else foo
+foofoofoo foobar elsewhere
+pre s all
+all coders be prepared for the challenge phase
+
+\end{verbatim}
+    \end{minipage}%
+
+
+    \begin{minipage}[t]{0.3\textwidth}%
+      \textbf{Output sample} \\      
+\begin{verbatim}
+3
+3
+0
+1
+3
+
+\end{verbatim}
+\end{minipage}\\
+    \hline
+\end{tabular}\end{center}\end{minipage}%

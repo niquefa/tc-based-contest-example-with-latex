@@ -1,0 +1,13 @@
+#   Problem                           Nemonic        Time (s)    Diff.   Reference       Technique
+
+A   Argus                             argus          1           4       UVa 1203        DS: Priority Queue
+B   Partitioning by Palindrome        palindrome     1           6       UVa 11584       DP: Strings
+C   Coin Collector                    coin           1           5       UVa 11264       Greedy
+D   Simple Divison                    division       1           5       UVa 10407       LCD/GCD
+E   Collector's Problem               collector      1           7       UVa 10779       Maxflow
+F   Knights in FEN                    fen            4           6       UVa 10422       BFS+Bitmask
+G   The Great Divide                  great          1           8       UVa 10256       CH+2D Inter
+H   Sentry Robots                     sentry         1           8       UVa 12549       Maximum Bipartite Matching
+I   Zeros and Ones                    zeros          1           2       UVa 10324       AdHoc
+J   Largest Clique                    clique         1           7       UVa 11324       Tarjan+DP on Graph
+

@@ -1,0 +1,66 @@
+You are developing a new software calculator. During the testing phase of the software you have found that the test cases use different symbols as the decimal point of floating numbers. Moreover some test cases contain useless space symbols. Now you want to bring the numbers to a unified format.
+
+You will be given a sequence of numbers. Remove all space symbols (ASCII code 32) from the given numbers and replace each non-digit symbol with a dot symbol ('.'). You should not make any other changes to the numbers.
+
+\subsection* {Input}
+
+The input will consist in several test cases; each test case will consist of a line with a integer N indicating the number of lines of numbers. Then follow N lines, each line with a string “number” of que given sequence numbers. You can assume the following conditions will always be true	
+numbers will have between 1 and 50 elements, inclusive.
+Each element of numbers will contain between 1 and 50 characters, inclusive.
+Each character in numbers will have ASCII code between 32 and 127, inclusive.
+Each element of numbers will contain at most one non-space non-digit symbol.
+Each element of numbers will contain at least one digit.
+
+\subsection* {Output}
+
+For each test case, print one line with the answer, follow the format on the output example.
+
+\outputnotice
+
+\vspace{12pt}
+\begin{minipage}[c]{1\textwidth}%
+	\begin{center}
+		\begin{tabular}{|l|l|} \hline 
+		\begin{minipage}[t]{0.6\textwidth}%
+		\bf{Input sample} \\
+		\begin{verbatim}
+3
+1.5
+2$ 3
+12 3
+6
+,5
+3,
+.5
+3.
+000,000
+000 000
+3
+263C45233 
+ 2364A56
+B273664
+
+\end{verbatim}
+    \end{minipage}%
+
+
+    \begin{minipage}[t]{0.3\textwidth}%
+      \textbf{Output sample} \\      
+\begin{verbatim}
+1.5
+2.3
+123
+.5
+3.
+.5
+3.
+000.000
+000000
+263.45233
+2364.56
+.273664
+
+\end{verbatim}
+\end{minipage}\\
+    \hline
+\end{tabular}\end{center}\end{minipage}%

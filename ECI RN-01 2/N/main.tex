@@ -1,0 +1,49 @@
+There are N animals numbered 0 to N-1 in a zoo. Each animal is a jaguar or a cat. Their heights are pairwise distinct. 
+
+Fox Jiro can't distinguish between jaguars and cats, so he asked the following question to each animal: "How many animals of the same kind as you are taller than you?" Each jaguar tells the number of jaguars taller than him, and each cat tells the number of cats taller than her. The differences of heights are slight, so Fox Jiro can't tell which animals are taller than other animals. However, each animal is able to determine which animals are taller that him and which ones are shorter. 
+
+The answer given by the i-th animal is answersi. Given these numbers, find and print the number of configurations resulting in exactly those numbers, assuming everyone tells the truth. Two configurations are different if there exists an i such that the i-th animal is a jaguar in one configuration and cat in the other configuration.
+
+\subsection* {Input}
+
+The input will consist in several test cases; each test case will consist of a line with the sequence answer. You can assume the following conditions will always be true:
+answers will contain between 1 and 40 elements, inclusive.
+Each element of answers will be between 0 and 40, inclusive.
+
+\subsection* {Output}
+
+For each test case, print one line with the answer, follow the format on the output example.
+
+\outputnotice
+
+\vspace{12pt}
+\begin{minipage}[c]{1\textwidth}%
+	\begin{center}
+		\begin{tabular}{|l|l|} \hline 
+		\begin{minipage}[t]{0.6\textwidth}%
+		\bf{Input sample} \\
+		\begin{verbatim}
+0 1 2 3 4
+5 8
+0 0 0 0 0 0
+1 0 2 0 1
+1 0 1
+
+\end{verbatim}
+    \end{minipage}%
+
+
+    \begin{minipage}[t]{0.3\textwidth}%
+      \textbf{Output sample} \\      
+\begin{verbatim}
+2
+0
+0
+8
+0
+
+
+\end{verbatim}
+\end{minipage}\\
+    \hline
+\end{tabular}\end{center}\end{minipage}%

@@ -1,0 +1,50 @@
+We have a String, let’s call it originalWord. Each character of originalWord is either 'a' or 'b'. Timmy claims that he can convert it to finalWord using exactly k moves. In each move, he can either change a single 'a' to a 'b', or change a single 'b' to an 'a'.
+
+You are given the Strings originalWord and finalWord, and the integer value k. Determine whether Timmy may be telling the truth. If there is a possible sequence of exactly k moves that will turn originalWord into finalWord, print "POSSIBLE" (quotes for clarity). Otherwise, print "IMPOSSIBLE".
+
+\subsection* {Input}
+
+The input will consist in several test cases; each test case will consist of a line with originalWord, finalWord and k, each token will be separated by a single space and there will not be leading or trailing spaces. You can assume the following conditions will always be true:
+Timmy may change the same letter multiple times. Each time counts as a different move.
+originalWord will contain between 1 and 50 characters, inclusive.
+finalWord and originalWord will contain the same number of characters.
+Each character in originalWord and finalWord will be 'a' or 'b'.
+k will be between 1 and 100, inclusive.
+
+\subsection* {Output}
+
+For each test case, print one line with the answer, follow the format on the output example.
+
+\outputnotice
+
+\vspace{12pt}
+\begin{minipage}[c]{1\textwidth}%
+	\begin{center}
+		\begin{tabular}{|l|l|} \hline 
+		\begin{minipage}[t]{0.6\textwidth}%
+		\bf{Input sample} \\
+		\begin{verbatim}
+aababba bbbbbbb 2
+aabb aabb 1
+aaaaabaa bbbbbabb 8
+aaa bab 4
+aababbabaa abbbbaabab 9
+
+\end{verbatim}
+    \end{minipage}%
+
+
+    \begin{minipage}[t]{0.3\textwidth}%
+      \textbf{Output sample} \\      
+\begin{verbatim}
+IMPOSSIBLE
+IMPOSSIBLE
+POSSIBLE
+POSSIBLE
+IMPOSSIBLE
+
+
+\end{verbatim}
+\end{minipage}\\
+    \hline
+\end{tabular}\end{center}\end{minipage}%

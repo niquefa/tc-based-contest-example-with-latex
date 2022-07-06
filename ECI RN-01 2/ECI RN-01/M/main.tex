@@ -1,0 +1,71 @@
+Little Rudolph had an important sequence of positive integers. The sequence consisted of $N$ positive integers $a_0$, $a_1$, .., $a_{N-1}$. 
+
+Rudolph wrote the sequence onto the blackboard in the classroom. While Rudolph had gone out, little Arthur came into the classroom and saw the sequence. Arthur likes to play with numbers as much as he likes to give his friends puzzles. So he did the following:
+First, he wrote a '+' or a '-' between each pair of consecutive numbers (possibly using different signs for different pairs of numbers).
+Next, for each sign he computed the result of the corresponding operation and wrote it under the sign. I.e., if he used the '+' sign between $a_i$ and $a_{i+1}$, he would write the sum $a_i$+$a_{i+1}$ under this '+' sign. Similarly, if he used the '-' sign between $a_i$ and $a_{i+1}$, he would write the difference $a_i$-$a_{i+1}$. In this way he obtained a new sequence of $N-1$ numbers $b_0$, $b_1$, .., $b_{N-2}$.
+Finally, he erased the original sequence. Now there was only the operator sequence $o_0$, $o_1$, .., $o_{N-2}$ and the resulting number sequence $b_0$, $b_2$, .., $b_{N-2}$ left on the blackboard.
+For example, if the original sequence was $\{1, 2, 3, 4\}$, and Arthur wrote operators {+, -, +}, then the content of the blackboard changed like this: 
+
+\begin{verbatim}
+1   2   3   4    ->    1 + 2 - 3 + 4    ->    1 + 2 - 3 + 4    ->     +  -  +
+                                                3  -1   7             3 -1  7
+\end{verbatim}
+
+When Rudolph returned, he was shocked as his important sequence had disappeared. Arthur quickly told him what operations he had performed and that Rudolph has to simply reconstruct the original sequence. 
+
+Unfortunately, little Arthur did not realize that it is not necessarily possible to determine the original sequence uniquely. For example, both original sequences $\{1, 2, 3, 4\}$ and $\{2, 1, 2, 5\}$ lead to the same sequence $\{3, -1, 7\}$ when operator sequence is $\{+, -, +\}$.
+
+The only thing Rudolph remembers about his original sequence is that all the integers were positive. Rudolph now wants to count all sequences of positive integers that match the blackboard. You are given an integer sequence called B and line of operators called operators both containing N-1 elements. The i-th element of B is the number bi and i-th element of operators will be '+' or '-', meaning that the i-th operator is + or -, respectively. Find and print the number of different positive integer sequences A that lead to sequence B when operators operators are used in the way described. If there are infinitely many such sequences, just print -1. Note that there may be test cases where no valid sequence A exists. For such test cases the correct value to print is 0.
+
+\subsection* {Input}
+
+The input will consist in several test cases; each test case will consist of two lines, a line with the sequence $B$, and a line with the operators. You can assume the following conditions will always be true:
+It is guaranteed that the correct answer will always fit into the 32-bit signed integer type.
+The integer 0 (zero) is not positive. It may not occur in Rudolph's original sequence.
+$B$ will contain between 1 and 50 elements, inclusive.
+operators will contain the same number of characters as the number of elements in $B$.
+Each element of $B$ will be between -1000000000 $(-10^9)$ and 1000000000 $(10^9)$, inclusive.
+Each character in operators will be either '+' or '-' (quotes for clarity).
+
+
+\subsection* {Output}
+
+For each test case, print one line with the answer, follow the format on the output example.
+
+\outputnotice
+
+\vspace{12pt}
+\begin{minipage}[c]{1\textwidth}%
+	\begin{center}
+		\begin{tabular}{|l|l|} \hline 
+		\begin{minipage}[t]{0.6\textwidth}%
+		\bf{Input sample} \\
+		\begin{verbatim}
+3 -1 7
++-+
+1
+-
+1
++
+10
++
+540 2012 540 2012 540 2012 540
+-+-+-+-
+
+\end{verbatim}
+    \end{minipage}%
+
+
+    \begin{minipage}[t]{0.3\textwidth}%
+      \textbf{Output sample} \\      
+\begin{verbatim}
+2
+-1
+0
+9
+1471
+
+\end{verbatim}
+\end{minipage}\\
+    \hline
+\end{tabular}\end{center}\end{minipage}%

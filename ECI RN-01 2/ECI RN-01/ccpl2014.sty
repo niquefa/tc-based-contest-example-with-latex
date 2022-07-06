@@ -1,0 +1,140 @@
+% Estilo para Colombian Collegiate Programming League - CCPL 2014
+% Adaptado de
+% * Estilo para XXVI Colombian Programming Contest ACIS REDIS 2012 
+% * Selectivo ACM ICPC Latinoamericana
+% * R. Cardoso
+
+\usepackage{amsmath}
+%\usepackage{amssymb}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{ifthen}
+\usepackage[utf8x]{inputenc}
+\usepackage{microtype}
+\usepackage[parfill]{parskip}
+%\usepackage{alegreya}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+
+%\DisableLigatures{encoding=*,family=*}  % Disable latex typographic ligatures (ff, fl, fi, ffi, ffl)
+\definecolor{Gray}{gray}{0.6}
+\newcolumntype{G}{!{\color{Gray}\vline}}
+\newcommand{\pto}{$\cdot$}
+\newcommand{\cfil}{\multicolumn{1}{>{\columncolor[gray]{.8}}c|}{\ }} 
+\newcommand{\gcline}[1]{\arrayrulecolor{Gray}\cline{#1}\arrayrulecolor{black}}
+
+\oddsidemargin  0.0in
+\evensidemargin 0.0in
+\textwidth      6.7in
+\headsep        0.5in
+\textheight     9.0in
+\topmargin     -0.5in
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[EL,OL]{Contest for diagnostics and follow up}
+\fancyhead[ER,OR]{Obsession beats talent sooner or later}
+%\fancyfoot[C]{Confidential}
+\fancyfoot[EC, OC] {\thepage}
+%\pagestyle{myheadings}
+%\markright{Competencia intercolegiada de programación\\ \url{@CCPL2003}}
+%\markright{Competencia intercolegiada de programación-Politécnico Grancolombiano}
+
+\newcounter{pcounter}\setcounter{pcounter}{0}
+\newcounter{INPUT}
+\newcommand{\inputstdin}{\setcounter{INPUT}{0}}
+\newcommand{\inputfile}{\setcounter{INPUT}{1}}
+
+\newcommand{\inputnotice}[1]
+    {\vspace{2mm}\noindent
+	  \ifthenelse{\value{INPUT}=0}
+					 {\emph{The input must be read from standard input.}}
+					 {\emph{The input must be read from the file {\sf #1.in}.}}
+    }
+
+\newcommand{\outputnotice}
+    {\vspace{2mm}\noindent
+    {\em The output must be written to the standard output.}
+    }
+
+% Redefine section titles
+\titleformat{\section}[block]{\Large\rmfamily\bfseries\filcenter}{}{1em}{}
+\titleformat{\subsection}[hang]{\bfseries}{}{1em}{}
+
+\newcommand{\problem}[2]
+    {
+    \addtocounter{pcounter}{1}
+    \newpage
+    \phantomsection\section{\Alph{pcounter} - #1}
+    %\addcontentsline{toc}{section}{\Alph{pcounter} - #1}
+    \vspace{-0.2in}
+    \begin{center}
+      \normalsize {\em Source file name:} {\tt #2.cpp}, {\em or} {\tt #2.java} {\em or} {\tt #2.py}\\
+      \vspace{10pt}
+    \end{center}
+    }
+
+\newcommand{\problemwtime}[3]
+    {
+    \addtocounter{pcounter}{1}
+    \newpage
+    \section{\Alph{pcounter} - #1}
+    \vspace{-0.2in}
+    \begin{center}
+      \normalsize {\em Source file name:} {\tt #2.cpp}, {\em or} {\tt #2.java} {\em or} {\tt #2.py}\\
+      \normalsize {\em Time limit:} #3 \\
+      \vspace{10pt}
+    \end{center}
+    }
+
+\newcommand{\problemwref}[4]
+    {
+    \addtocounter{pcounter}{1}
+    \newpage
+    \section{\Alph{pcounter} - #1}
+    \vspace{-0.2in}
+    \begin{center}
+      \normalsize {\em Source file name:} {\tt #2.cpp}, {\em or} {\tt #2.java} {\em or} {\tt #2.py}\\
+      \normalsize {\em #3:} #4 \\
+      \vspace{10pt}
+    \end{center}
+    }
+
+\newcommand{\problemwtimeref}[5]
+    {
+    \addtocounter{pcounter}{1}
+    \newpage
+    \section{\Alph{pcounter} - #1}
+    \vspace{-0.2in}
+    \begin{center}
+      \normalsize {\em Source file name:} {\tt #2.cpp}, {\em or} {\tt #2.java} {\em or} {\tt #2.py}\\
+      \normalsize {\em Time limit:} #3 \\
+      \normalsize {\em #4:} #5 \\
+      \vspace{10pt}
+    \end{center}
+    }
+
+% table of contents
+\renewcommand\contentsname{}
+\renewcommand{\cftsecfont}{\rmfamily}
+\setcounter{secnumdepth}{-1} 
+\newcommand{\customtoc}
+    {
+      \vspace{-0.5in}
+      {\small
+        \tableofcontents
+        \addtocontents{toc}{~\hfill\par}
+      } 
+    }
+\renewcommand{\cftsecpagefont}{\rmfamily}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}

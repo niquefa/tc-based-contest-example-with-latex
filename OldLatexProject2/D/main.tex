@@ -1,0 +1,46 @@
+Farmer John had $N$ cows numbered $0$ to $N-1$. One day he saw $K$ cows running away from his farm. Fox Brus computed the sum of the numbers of the escaped cows. She only told John that the sum was divisible by $N$. 
+
+Your task is to help John by counting the number of possible sets of escaped cows. This number may be very big, so printindex it modulo $1,000,000,007$. $N$ will be between 1 and 1,000, inclusive. $K$ will be between 1 and 47, inclusive. $K$ will be less than or equal to $N$. For the first sample: 7 cows are numbered 0 to 6 and 4 of them run away. Possible sets of escaped cows are $\{0, 1, 2, 4\}$, $\{0, 3, 5, 6\}$, $\{1, 2, 5, 6\}$, $\{1, 3, 4, 6\}$, $\{2, 3, 4, 5\}$.
+
+\subsection* {Input}
+
+The input will contain several test case, each in a line. The integers $N$ and $K$
+
+\subsection* {Output}
+
+Print a line per test case, the solution to the problem.
+
+\outputnotice
+
+\vspace{12pt}
+\begin{minipage}[c]{1\textwidth}%
+	\begin{center}
+		\begin{tabular}{|l|l|} \hline 
+		\begin{minipage}[t]{0.6\textwidth}%
+		\bf{Input sample} \\
+		\begin{verbatim}
+7 4
+1 1
+58 4
+502 7
+1000 47
+2 1
+
+\end{verbatim}
+    \end{minipage}%
+
+
+    \begin{minipage}[t]{0.3\textwidth}%
+      \textbf{Output sample} \\      
+\begin{verbatim}
+5
+1
+7322
+704466492
+219736903
+1
+
+\end{verbatim}
+\end{minipage}\\
+    \hline
+\end{tabular}\end{center}\end{minipage}%

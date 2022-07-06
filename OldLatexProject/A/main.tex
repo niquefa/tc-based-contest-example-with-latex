@@ -1,0 +1,65 @@
+Given a string of digits, find the minimum number of additions required for the string to equal some target number. Each addition is the equivalent of inserting a plus sign somewhere into the string of digits. After all plus signs are inserted, evaluate the sum as usual. For example, consider the string "12" (quotes for clarity). With zero additions, we can achieve the number 12. If we insert one plus sign into the string, we get "1+2", which evaluates to 3. So, in that case, given "12", a minimum of 1 addition is required to get the number 3. As another example, consider "303" and a target sum of 6. The best strategy is not "3+0+3", but "3+03". You can do this because leading zeros do not change the result.
+
+Write a program that takes the String $numbers$ and an integer $sum$. The program should calculate and print the minimum number of additions required to create an expression from numbers that evaluates to sum. If this is impossible, print -1.
+
+\begin{itemize}
+\item $numbers$ will contain between 1 and 10 characters, inclusive.
+\item Each character in $numbers$ will be a digit.
+\item $sum$ will be between 0 and 100, inclusive.
+\item For the first sample test case: In this case, the only way to achieve 45 is to add 9+9+9+9+9. This requires 4 additions.
+\item For the second test case: Be careful with zeros. 1+1+1+0=3 and requires 3 additions.
+\item For the fifth test case: There are 3 ways to get 100. They are 38+28+34, 3+8+2+83+4 and 3+82+8+3+4. The minimum required is 2.
+\end{itemize}
+
+\subsection* {Input}
+
+The input will contain several test case, each in a line. The String $numbers$ and the integer $sum$.
+
+\subsection* {Output}
+
+Print a line per test case, the solution to the problem.
+
+\outputnotice
+
+\vspace{12pt}
+\begin{minipage}[c]{1\textwidth}%
+	\begin{center}
+		\begin{tabular}{|l|l|} \hline 
+		\begin{minipage}[t]{0.6\textwidth}%
+		\bf{Input sample} \\
+		\begin{verbatim}
+99999 45
+1110 3
+0123456789 45
+99999 100
+382834 100
+9230560001 71
+0000000000 0
+111 3
+1111111111 10
+1212121212 15
+1213121712 21
+
+\end{verbatim}
+    \end{minipage}%
+
+
+    \begin{minipage}[t]{0.3\textwidth}%
+      \textbf{Output sample} \\      
+\begin{verbatim}
+4
+3
+8
+-1
+2
+4
+0
+2
+9
+9
+9
+
+\end{verbatim}
+\end{minipage}\\
+    \hline
+\end{tabular}\end{center}\end{minipage}%

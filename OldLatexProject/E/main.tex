@@ -1,0 +1,54 @@
+You are converting old code for a new compiler version. Each $->$ string should be replaced by ".", but this replacement shouldn't be done inside comments. A comment is a string that starts with "//" and terminates at the end of the line.
+
+You will be given a sequence of lines; a program, containing the old code. Printa a sequence of lines containing the converted version of the code.
+
+
+\subsection* {Input}
+
+The input will consist in several test cases; each test case will consist of a line with an integer N between 1 and 50 and a program in the next N lines. You can assume the following conditions will always be true. Each element of program will contain between 1 and 50 characters, inclusive. Each character in program will have ASCII value between 32 and 127, inclusive.
+
+\subsection* {Output}
+
+For each test case, print the converted program, the answer, follow the format on the output example.
+
+\outputnotice
+
+\vspace{12pt}
+\begin{minipage}[c]{1\textwidth}%
+	\begin{center}
+		\begin{tabular}{|l|l|} \hline 
+		\begin{minipage}[t]{0.45\textwidth}%
+		\bf{Input sample} \\
+		\begin{verbatim}
+4
+Test* t = new Test(); 
+t->a = 1; 
+t->b = 2; 
+t->go(); // a=1, b=2 --> a=2, b=3
+3
+---> // the arrow --->
+---
+> // the parted arrow
+1
+->-> // two successive arrows ->->
+
+\end{verbatim}
+    \end{minipage}%
+
+
+    \begin{minipage}[t]{0.45\textwidth}%
+      \textbf{Output sample} \\      
+\begin{verbatim}
+Test* t = new Test(); 
+t.a = 1; 
+t.b = 2; 
+t.go(); // a=1, b=2 --> a=2, b=3
+--. // the arrow --->
+---
+> // the parted arrow
+.. // two successive arrows ->->
+
+\end{verbatim}
+\end{minipage}\\
+    \hline
+\end{tabular}\end{center}\end{minipage}%

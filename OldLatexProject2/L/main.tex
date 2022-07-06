@@ -1,0 +1,52 @@
+The Haar wavelet transform is possibly the earliest wavelet transform, introduced by Haar in 1909. The 1-dimensional version of this transform operates on a sequence of integer data as follows: First separate the sequence into pairs of adjacent values, starting with the first and second values, then the third and fourth values, etc. Next, calculate the sums of each of these pairs, and place the sums in order into a new sequence. Then, calculate the differences of each of the pairs (subtract the second value of each pair from the first value), and append the differences in order to the end of the new sequence. The resulting sequence is a level-1 transform. Note that this requires the input sequence to have an even number of elements. 
+
+The above describes a level-1 transform. To perform a level-2 transform, we repeat the above procedure on the first half of the sequence produced by the level-1 transform. The second half of the sequence remains unchanged from the previous level. This pattern continues for higher level transforms (i.e., a level-3 transform operates with the first quarter of the sequence, and so on). Note that this is always possible when the number of elements is a power of 2. 
+
+Given a sequence of integers; data and an integer L. Find and print the level-L Haar transform of the data.
+ 
+
+\subsection* {Input}
+
+The input will consist in several test cases; each test case will consist of two lines, a line with the data, and a line with L. You can assume the following conditions will always be true	
+The given data will contain exactly 2, 4, 8, 16 or 32 elements.
+Each element of data will be between 0 and 100 inclusive.
+L will be between 1 and $log_2$(Number of elements in data) inclusive.
+
+\subsection* {Output}
+
+For each test case, print one line with the answer, follow the format on the output example.
+
+\outputnotice
+
+\vspace{12pt}
+\begin{minipage}[c]{1\textwidth}%
+	\begin{center}
+		\begin{tabular}{|l|l|} \hline 
+		\begin{minipage}[t]{0.6\textwidth}%
+		\bf{Input sample} \\
+		\begin{verbatim}
+1 2 3 5
+1
+1 2 3 5
+2
+1 2 3 4 4 3 2 1
+3
+94 47 46 28 39 89 75 4 28 62 69 89 34 55 81 24
+2
+
+\end{verbatim}
+    \end{minipage}%
+
+
+    \begin{minipage}[t]{0.3\textwidth}%
+      \textbf{Output sample} \\      
+\begin{verbatim}
+3 8 -1 -2
+11 -5 -1 -2
+20 0 -4 4 -1 -1 1 1
+215 207 248 194 67 49 -68 -16 47 18 -50 71 -34 -20 -21 57
+
+\end{verbatim}
+\end{minipage}\\
+    \hline
+\end{tabular}\end{center}\end{minipage}%

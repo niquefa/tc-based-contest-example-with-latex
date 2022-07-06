@@ -1,0 +1,17 @@
+\nobreakspace {}\hfill \par 
+\contentsline {section}{A - Sums}{2}{section*.1}
+\contentsline {section}{B - Tower}{4}{section*.2}
+\contentsline {section}{C - Songs}{6}{section*.3}
+\contentsline {section}{D - Cow}{7}{section*.4}
+\contentsline {section}{E - Changer}{8}{section*.5}
+\contentsline {section}{F - Vocabulary}{9}{section*.6}
+\contentsline {section}{G - Test}{11}{section*.7}
+\contentsline {section}{H - Dancing}{13}{section*.8}
+\contentsline {section}{I - Machine}{14}{section*.9}
+\contentsline {section}{J - Power}{15}{section*.10}
+\contentsline {section}{K - Chess}{16}{section*.11}
+\contentsline {section}{L - Haar}{18}{section*.12}
+\contentsline {section}{M - Sequence}{20}{section*.13}
+\contentsline {section}{N - Jaguars}{22}{section*.14}
+\contentsline {section}{O - Kingdom}{23}{section*.15}
+\contentsline {section}{P - Sea}{24}{section*.16}

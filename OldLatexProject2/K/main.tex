@@ -1,0 +1,74 @@
+You have decided that too many people do not know how to play chess. So, in an effort to teach the rules you must write some software that helps to understand how chess-pieces affect one another. Your current project involves the knight and its ability to threaten one or more pieces at once. The knight has an unusual style of "jumping" around the board. One move consists of traveling two squares in one of the four cardinal directions, followed by one square perpendicular to the original direction. For example, if a knight is on (0,0), it may move to (2,1), (2,-1), (1,2), (1,-2), (-2, 1), (-2,-1), (-1,2), or (-1,-2). In addition, if a piece is on any of those locations, it is threatened by the knight on (0,0).
+You will be given a sequence of pieces; pieces, where each element is a comma delimited set of coordinates. Every element in pieces is formatted as "<x-coordinate>,<y-coordinate>" (quotes and angle brackets for clarity). Calculate and print a sequence of lines where each line represents a position from which a knight threatens every piece in pieces. Your printed sequence of lines must be in the same format as pieces and sorted in increasing order by the x-coordinate. If two sets of coordinates have the same x-coordinate, the one with the smaller y-coordinate must come first.
+
+\subsection* {Input}
+
+The input will consist in several test cases; each test case will consist of a line an Integer N, indicating the numbers of lines that follow, each of the next N lines will be an element of pieces. You can assume the following conditions will always be true:
+pieces will contain between 1 and 8 elements, inclusive.
+Each element in pieces will be formatted as "<x-coordinate>,<y-coordinate>" (quotes and angle brackets for clarity).
+Each <x-coordinate> will be an integer between -10000 and 10000, inclusive and will not contain leading zeros.
+Each <y-coordinate> will be an integer between -10000 and 10000, inclusive and will not contain leading zeros.
+Each element in pieces will be unique.
+
+\subsection* {Output}
+
+For each test case, print several lines with the answer; follow the format on the output example.
+
+\outputnotice
+
+\vspace{12pt}
+\begin{minipage}[c]{1\textwidth}%
+	\begin{center}
+		\begin{tabular}{|l|l|} \hline 
+		\begin{minipage}[t]{0.6\textwidth}%
+		\bf{Input sample} \\
+		\begin{verbatim}
+1
+0,0
+2
+2,1
+-1,-2
+2
+0,0
+2,1
+3
+-1000,1000
+-999,999
+-999,997
+
+\end{verbatim}
+    \end{minipage}%
+
+
+    \begin{minipage}[t]{0.3\textwidth}%
+      \textbf{Output sample} \\      
+\begin{verbatim}
+8 found
+-2,-1
+-2,1
+-1,-2
+-1,2
+1,-2
+1,2
+2,-1
+2,1
+2 found
+0,0
+1,-1
+0 found
+1 found
+-1001,998
+8 found
+-10002,-10001
+-10002,-9999
+-10001,-10002
+-10001,-9998
+-9999,-10002
+-9999,-9998
+-9998,-10001
+-9998,-9999
+
+\end{verbatim}
+\end{minipage}\\
+    \hline
+\end{tabular}\end{center}\end{minipage}%

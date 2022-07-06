@@ -1,0 +1,56 @@
+A number n taken to the falling factorial power k is defined as n*(n-1)*...*(n-k+1). We will denote it by n+++k. For example, 7+++3=7*6*5=210. By definition, n+++1=n.
+
+We will now continue this definition to the non-positive values of k using the following fact: (n-k)*(n+++k)=n+++(k+1), or, in other words, n+++k=(n+++(k+1))/(n-k). It is directly derived from the above definition.
+
+By using it, we find:
+
+n+++0=n+++1/(n-0)=1,\\
+n+++(-1)=n+++0/(n+1)=1/(n+1),\\
+n+++(-2)=1/(n+1)/(n+2),\\
+and, in general, n+++(-k)=1/(n+1)/(n+2)/.../(n+k).\\
+For example, 3+++(-1)=1/4=0.25, 2+++(-3)=1/3/4/5=1/60=0.016666...\\
+Given a positive integer n $(1<=n<=10)$ and an integer k $(-5<=n<=5)$, find and print a real number containing the value of n taken to the falling factorial power of k.
+
+
+
+\subsection* {Input}
+
+The input will consist in several test cases; each test case will consist of a line with n and k.
+
+\subsection* {Output}
+
+For each test case, print one line with the answer, follow the format on the output example. The answer must be rounded and printed with sex decimal positions.
+
+\outputnotice
+
+\vspace{12pt}
+\begin{minipage}[c]{1\textwidth}%
+	\begin{center}
+		\begin{tabular}{|l|l|} \hline 
+		\begin{minipage}[t]{0.6\textwidth}%
+		\bf{Input sample} \\
+		\begin{verbatim}
+7 3
+10 1
+5 0
+3 -1
+2 -3
+
+\end{verbatim}
+    \end{minipage}%
+
+
+    \begin{minipage}[t]{0.3\textwidth}%
+      \textbf{Output sample} \\      
+\begin{verbatim}
+210.000000
+10.000000
+1.000000
+0.250000
+0.016667
+
+
+\end{verbatim}
+\end{minipage}\\
+    \hline
+\end{tabular}\end{center}\end{minipage}%
